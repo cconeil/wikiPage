@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+<title> WIKI </title>
+</head>
+<style type ="text/CSS">
+	body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #333;
+	}
+	link {
+	font-size:8px;
+	color:gray;
+	margin:right;
+	}
+</style>
+<body>
+	<div class = "link"> <a href="/wiki/login"> login </a> | <a href="/wiki/signup"> signup </a> </div>
+	
+	<form method = "post" > 
+	<h2> {{title}} </h2>
+		{{body}}
+</body>
+
+
+
+
+
+</head>

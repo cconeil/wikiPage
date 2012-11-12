@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>CS253-Wiki</title>
+  </head>
+
+  <body>
+    <div class="nav">
+        <a href="{{edit_link}}">edit</a> | <a href="{{back_link}}">view</a> |
+        {{username}}<a href="/logout">(logout)</a>
+    </div>
+	<h2> {{title}} </h2>
+<br> <br>
+    <span></span>
+    <table>
+{% for we in wiki_entries %}
+        <tr>
+            <h1> <td>{{we.timestamp.strftime("%A %d. %B %Y")}}</td> </h1>
+		
+            <h2> <td>{{we.post}}</td> </h2>
+            <!--<td><a href="{{we.link}}?v={{we.key().id()}}">view</a></td> -->
+		<td><a href="{{we.link}}?v={{we.key().id()}}">view</a></td>
+            <td><a href="{{edit_link}}?v={{we.key().id()}}">edit</a></td>
+        </tr>
+{% endfor %}
+
+    </table>
+  </body>
+
+</html>
